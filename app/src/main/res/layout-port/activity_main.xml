@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_port"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".activities.SettingsActivity">
+
+
+    <TextView
+        android:id="@+id/label_settings"
+        android:layout_width="fill_parent"
+        android:layout_height="68dp"
+        android:gravity="center"
+        android:text="@string/settings_label"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp">
+
+
+        <EditText
+            android:id="@+id/text_input_ip"
+            android:layout_width="142dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textShortMessage"
+            android:text="127.0.0.1"
+            android:textColor="@color/white"
+            android:tooltipText="IP Address"
+            />
+
+        <TextView
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:text=":"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            />
+
+        <EditText
+            android:id="@+id/text_input_port"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:text="1337"
+            android:textColor="@color/white"
+            android:tooltipText="Port" />
+
+
+        <CheckBox
+            android:id="@+id/checkBox_default"
+            android:layout_width="186dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:text="Default Gateway"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textColorLink="@color/white"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="244dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Packet Delay:"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

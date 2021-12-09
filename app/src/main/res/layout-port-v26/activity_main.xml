@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_port"
+    android:padding="20dp"
+    tools:context=".activities.SettingsActivity">
+
+
+    <TextView
+        android:id="@+id/label_settings"
+        android:layout_width="fill_parent"
+        android:layout_height="68dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/settings_label"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#4DFF0000"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_settings"
+        app:layout_constraintVertical_bias="0.07">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+
+            <EditText
+                android:id="@+id/text_input_ip"
+                android:layout_width="142dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textShortMessage"
+                android:text="127.0.0.1"
+                android:textColor="#808080"
+                android:tooltipText="IP Address"
+                android:enabled="false"
+                />
+
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:text=":"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:gravity="center"
+                />
+
+            <EditText
+                android:id="@+id/text_input_port"
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:text="1337"
+                android:textColor="#808080"
+                android:tooltipText="Port"
+                android:enabled="false"
+                />
+
+
+            <CheckBox
+                android:id="@+id/checkBox_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:outlineAmbientShadowColor="@color/white"
+                android:outlineSpotShadowColor="@color/white"
+                android:shadowColor="@color/white"
+                android:text="Default Gateway"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/white"
+                android:textColorHint="@color/white"
+                android:textColorLink="@color/white"
+                android:textSize="20sp"
+                android:checked="true"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/label_packetDelay"
+                android:layout_width="79dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Packet Delay:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/input_packet_delay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:text="100"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ms"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <SeekBar
+                android:id="@+id/seekBar_packet_delay"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:max="1000"
+                android:min="10"
+                android:progress="100" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp">
+
+
+            <TextView
+                android:layout_width="278dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Show 3D Preview:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox_3d_preview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Enabled"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:background="#4DFF0000"
+        android:gravity="bottom"
+
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/networking_label"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_marginBottom="15dp"
+            />
+
+        <EditText
+            android:id="@+id/input_debug_packet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textShortMessage"
+            android:text="0,180,180"
+            android:textColor="@color/white"
+            android:gravity="center"
+            />
+
+        <Button
+            android:id="@+id/button_send_debug"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send Debug Packet" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            >
+
+            <Button
+                android:id="@+id/button_connect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connect"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/button_disconnect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disconnect"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
